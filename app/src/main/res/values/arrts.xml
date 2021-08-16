@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PieChart">
+        <!--是否显示中心圆-->
+        <attr name="isShowCenterCircle" format="boolean" />
+        <!--是否显示中心字体-->
+        <attr name="isShowCenterText" format="boolean" />
+        <!--圆环是否可以点击-->
+        <attr name="isOpenCheckStatus" format="boolean" />
+        <!--中心圆背景颜色-->
+        <attr name="CenterBgColor" format="color" />
+        <!--中心字体颜色-->
+        <attr name="CenterTextColor" format="color" />
+        <!--中心字体内容-->
+        <attr name="CenterText" format="string" />
+        <!--中心字体大小-->
+        <attr name="CenterTextSize" format="integer" />
+        <!--中心圆半径-->
+        <attr name="CenterRadius" format="integer" />
+        <!--最外部半径-->
+        <attr name="OuterRadius" format="integer" />
+        <!--点击需要凸出的半径-->
+        <attr name="OuterAddRadius" format="integer" />
+        <!--是否显示折线百分比-->
+        <attr name="isShowPercentage" format="boolean" />
+        <!--百分比折线长度-->
+        <attr name="PercentageLong" format="integer" />
+        <!--百分比折线宽度-->
+        <attr name="PercentageWidth" format="integer" />
+        <!--百分比字体大小-->
+        <attr name="PercentageTvSize" format="integer" />
+    </declare-styleable>
+
+
+    <!--圆弧进度条-->
+    <declare-styleable name="TasksCompletedView">
+        <attr name="radius" format="dimension" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="circleColor" format="color" />
+        <attr name="ringColor" format="color" />
+        <attr name="ringBgColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgress">
+        <!--   进度条宽度     -->
+        <attr name="progress_width" format="dimension" />
+        <!--   进度条颜色     -->
+        <attr name="progress_color" format="color" />
+        <!--   进度条背景颜色     -->
+        <attr name="progress_bg_color" format="color" />
+        <!--   进度     -->
+        <attr name="progress" format="integer" />
+        <!--   文字大小     -->
+        <attr name="circle_text_size" format="dimension" />
+        <!--   文字颜色     -->
+        <attr name="circle_text_color" format="color" />
+        <!--   是否显示居中文字     -->
+        <attr name="isVisibleText" format="boolean" />
+        <!--   进度条起点位置     -->
+        <attr name="location_start" format="enum">
+            <enum name="left" value="1" />
+            <enum name="top" value="2" />
+            <enum name="right" value="3" />
+            <enum name="bottom" value="4" />
+        </attr>
+    </declare-styleable>
+
+    <string-array name="date">
+        <item>阿妹</item>
+        <item>阿郎</item>
+        <item>陈奕迅</item>
+        <item>周杰伦</item>
+        <item>曾一鸣</item>
+        <item>成龙</item>
+        <item>王力宏</item>
+        <item>汪峰</item>
+        <item>王菲</item>
+        <item>那英</item>
+        <item>张伟</item>
+        <item>张学友</item>
+        <item>李德华</item>
+        <item>郑源</item>
+        <item>白水水</item>
+        <item>白天不亮</item>
+        <item>陈龙</item>
+        <item>陈丽丽</item>
+        <item>哈林</item>
+        <item>高进</item>
+        <item>高雷</item>
+        <item>阮今天</item>
+        <item>龚琳娜</item>
+        <item>苏醒</item>
+        <item>苏永康</item>
+        <item>陶喆</item>
+        <item>沙宝亮</item>
+        <item>宋冬野</item>
+        <item>宋伟</item>
+        <item>袁成杰</item>
+        <item>戚薇</item>
+        <item>齐大友</item>
+        <item>齐天大圣</item>
+        <item>品冠</item>
+        <item>吴克群</item>
+        <item>BOBO</item>
+        <item>Jobs</item>
+        <item>动力火车</item>
+        <item>伍佰</item>
+        <item>#蔡依林</item>
+        <item>$797835344$</item>
+        <item>Jack</item>
+        <item>~夏先生</item>
+    </string-array>
+
+</resources>

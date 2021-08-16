@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tc="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#addafd"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/circle_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.example.test.circle.AnnulusView
+            android:id="@+id/tasks_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            tc:circleColor="@color/white"
+            tc:radius="30dp"
+            tc:ringBgColor="#353535"
+            tc:ringColor="#353535"
+             />
+    </LinearLayout>
+
+    <com.example.test.circle.CircleProgress
+        android:id="@+id/circleProgress"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="15dp"
+        tc:circle_text_color="#000000"
+        tc:circle_text_size="16sp"
+        tc:isVisibleText="true"
+        tc:progress="0"
+        tc:progress_bg_color="#353535"
+        tc:progress_color="#DDDDDD"
+        tc:progress_width="5dp" />
+
+    <LinearLayout
+        android:layout_width="94dp"
+        android:layout_height="120dp"
+        android:background="#212121" 
+        android:orientation="vertical">
+
+        <com.example.test.circle.CircleProgressOne
+            android:id="@+id/circleProgressOne"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_margin="15dp"
+            tc:circle_text_color="#ffffff"
+            tc:circle_text_size="20sp"
+            tc:isVisibleText="true"
+            tc:progress="0"
+            tc:progress_bg_color="#797979"
+            tc:progress_color="#ffffff"
+            tc:progress_width="3dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="倒计时"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="start"
+        android:text="start" />
+
+</LinearLayout>

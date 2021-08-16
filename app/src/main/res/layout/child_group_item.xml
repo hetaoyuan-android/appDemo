@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/item_checkbox"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="64dp"
+        android:background="@drawable/send_msg_checkbox_button"
+        android:button="@null" />
+
+    <ImageView
+        android:id="@+id/item_indicator"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/expand_contact_icon"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/childGroupTV"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/item_checkbox"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#293040"
+        android:gravity="center|left"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:text=""/>
+</RelativeLayout>
