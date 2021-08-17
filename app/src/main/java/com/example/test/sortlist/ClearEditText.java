@@ -97,7 +97,7 @@ public class ClearEditText extends androidx.appcompat.widget.AppCompatEditText i
 
     /**
      * 设置清除图标的显示与隐藏，调用setCompoundDrawables为EditText绘制上去
-     *
+     *      *
      * @param visible
      */
     protected void setClearIconVisible(boolean visible) {

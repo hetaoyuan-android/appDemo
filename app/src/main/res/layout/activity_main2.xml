@@ -44,5 +44,9 @@
         android:layout_height="wrap_content"
         android:onClick="sortList"
         android:text="拼音列表"/>
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="tabList"
+        android:text="新闻标签"/>
 </LinearLayout>
