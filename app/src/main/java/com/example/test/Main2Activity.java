@@ -11,10 +11,12 @@ import com.example.test.annotation.AnnotationActivity;
 import com.example.test.bezier.BezierActivity;
 import com.example.test.chart.ChartActivity;
 import com.example.test.circle.CircleActivity;
+import com.example.test.flowlayout.FlowActivity;
 import com.example.test.imagetext.ImageAddTextActivity;
 import com.example.test.sortlist.SortListActivity;
 import com.example.test.tabscroll.TabScrollActivity;
 import com.example.test.tree.TreeActivity;
+import com.example.test.videoplayer.GSYActivity;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -69,6 +71,15 @@ public class Main2Activity extends AppCompatActivity {
 
     public void tabList(View view) {
         Intent intent = new Intent(Main2Activity.this, TabScrollActivity.class);
+        startActivity(intent);
+
+    }
+    public void videoPlayer(View view) {
+        Intent intent = new Intent(Main2Activity.this, GSYActivity.class);
+        startActivity(intent);
+    }
+    public void imgScale(View view) {
+        Intent intent = new Intent(Main2Activity.this, FlowActivity.class);
         startActivity(intent);
     }
 }

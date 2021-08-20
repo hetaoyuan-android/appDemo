@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.test"
-        minSdkVersion 18
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -37,4 +37,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //权限
     implementation 'com.permissionx.guolindev:permissionx:1.4.0'
+    implementation 'com.shuyu:GSYVideoPlayer:8.0.0'//完整版引入GSYVideoPlayer
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
 }
