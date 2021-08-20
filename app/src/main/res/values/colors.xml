@@ -44,4 +44,8 @@
     <color name="subscribe_bg">#fff5f5f5</color>
     <color name="subscribe_seperate_line">#ffcdcdcd</color>
 
+    <color name="popup_main_background">#b0000000</color>
+    <color name="choose_eara_item_press_color">#f4f4f4</color>
+    <color name="no_color">#00000000</color>
+
 </resources>
