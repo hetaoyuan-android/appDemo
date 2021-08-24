@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp" >
+    <ImageView 
+        android:layout_margin="5dp"
+        android:id="@+id/iv_first"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/pic_default_pic"
+        android:scaleType="centerCrop"
+        />
+    <LinearLayout 
+        android:layout_toRightOf="@id/iv_first"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        >
+        <TextView 
+            android:id="@+id/tv_dir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="文件夹路径"
+            android:maxLines="3"
+            android:ellipsize="middle"
+            android:textSize="18sp"
+            />
+        <TextView 
+            android:id="@+id/tv_count"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24张"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            />
+        
+    </LinearLayout>
+   
+
+</RelativeLayout>

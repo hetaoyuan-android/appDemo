@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 相机权限 -->
     <uses-permission android:name="android.permission.CAMERA" /> <!-- 访问外部权限 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
@@ -17,6 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".eventbus.ReceiveEventActivity"></activity>
+        <activity android:name=".eventbus.EventBusActivity" />
         <activity
             android:name=".videoplayer.GSYActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
@@ -40,12 +42,14 @@
         <activity android:name=".view.HorizontalActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".sortlist.SortListActivity" />
-        <activity android:name=".genged.ThreeGangedActivity"/>
-        <activity android:name=".twoganged.TwoGangedActivity"/>
-        <activity android:name=".twoganged.view.ExpandableGridViewActivity"/>
-        <activity android:name=".twoganged.view.ExpandableListViewActivity"/>
-        <activity android:name=".twoganged.view.ListListActivity"/>
-        <activity android:name=".twoganged.view.ScrollGridActivity"/>
+        <activity android:name=".genged.ThreeGangedActivity" />
+        <activity android:name=".twoganged.TwoGangedActivity" />
+        <activity android:name=".twoganged.view.ExpandableGridViewActivity" />
+        <activity android:name=".twoganged.view.ExpandableListViewActivity" />
+        <activity android:name=".twoganged.view.ListListActivity" />
+        <activity android:name=".twoganged.view.ScrollGridActivity" />
+        <activity android:name=".photopicker.selector.SelectorActivity"/>
+        <activity android:name=".photopicker.selector.GalleryFileActivity"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"

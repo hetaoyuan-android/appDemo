@@ -85,6 +85,11 @@
                 android:layout_height="wrap_content"
                 android:onClick="twoGanged"
                 android:text="二级联动" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="selectorImg"
+                android:text="图片选择" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
