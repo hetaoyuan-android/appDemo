@@ -15,6 +15,7 @@ import com.example.test.flowlayout.FlowActivity;
 import com.example.test.genged.ThreeGangedActivity;
 import com.example.test.imagetext.ImageAddTextActivity;
 import com.example.test.photopicker.selector.SelectorActivity;
+import com.example.test.shapeview.ShapeViewActivity;
 import com.example.test.sortlist.SortListActivity;
 import com.example.test.tabscroll.TabScrollActivity;
 import com.example.test.tree.TreeActivity;
@@ -98,6 +99,11 @@ public class Main2Activity extends AppCompatActivity {
 
     public void selectorImg(View view) {
         Intent intent = new Intent(Main2Activity.this, SelectorActivity.class);
+        startActivity(intent);
+    }
+
+    public void shapeView(View view) {
+        Intent intent = new Intent(Main2Activity.this, ShapeViewActivity.class);
         startActivity(intent);
     }
 }

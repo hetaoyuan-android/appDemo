@@ -17,7 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".eventbus.ReceiveEventActivity"></activity>
+        <activity android:name=".shapeview.ShapeViewActivity"></activity>
+        <activity android:name=".eventbus.ReceiveEventActivity" />
         <activity android:name=".eventbus.EventBusActivity" />
         <activity
             android:name=".videoplayer.GSYActivity"
@@ -48,8 +49,8 @@
         <activity android:name=".twoganged.view.ExpandableListViewActivity" />
         <activity android:name=".twoganged.view.ListListActivity" />
         <activity android:name=".twoganged.view.ScrollGridActivity" />
-        <activity android:name=".photopicker.selector.SelectorActivity"/>
-        <activity android:name=".photopicker.selector.GalleryFileActivity"/>
+        <activity android:name=".photopicker.selector.SelectorActivity" />
+        <activity android:name=".photopicker.selector.GalleryFileActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

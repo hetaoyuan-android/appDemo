@@ -23,6 +23,12 @@ android {
         }
     }
 
+    // 支持 JDK 1.8
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
 }
 
 dependencies {
@@ -45,4 +51,6 @@ dependencies {
     //EventBus
     implementation 'org.greenrobot:eventbus:3.1.1'
     implementation files('libs/universal-image-loader-1.9.4-with-sources.jar')
+    // Shape 框架：https://github.com/getActivity/ShapeView
+    implementation 'com.github.getActivity:ShapeView:5.0'
 }

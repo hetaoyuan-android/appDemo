@@ -91,6 +91,12 @@
                 android:onClick="selectorImg"
                 android:text="图片选择" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="shapeView"
+                android:text="ShapeView" />
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>
