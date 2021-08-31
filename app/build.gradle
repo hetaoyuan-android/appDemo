@@ -53,4 +53,8 @@ dependencies {
     implementation files('libs/universal-image-loader-1.9.4-with-sources.jar')
     // Shape 框架：https://github.com/getActivity/ShapeView
     implementation 'com.github.getActivity:ShapeView:5.0'
+
+    // 调色板
+    //noinspection GradleCompatible
+    implementation 'com.android.support:palette-v7:26.0.0-alpha1'
 }

@@ -111,4 +111,23 @@
         <item>~夏先生</item>
     </string-array>
 
+    <declare-styleable name="GradualChangeTextView">
+        <!--文字 -->
+        <attr name="gradual_text" format="string" />
+        <!--文字大小-->
+        <attr name="gradual_text_size" format="dimension" />
+        <!--文字下层颜色-->
+        <attr name="gradual_below_color" format="color" />
+        <!--文字上层颜色-->
+        <attr name="gradual_up_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleRelateLayout">
+        <!--文字 -->
+        <attr name="left_top_radius" format="dimension" />
+        <attr name="right_top_radius" format="dimension" />
+        <attr name="left_bottom_radius" format="dimension" />
+        <attr name="right_bottom_radius" format="dimension" />
+    </declare-styleable>
+
 </resources>
