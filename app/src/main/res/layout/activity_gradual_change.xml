@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="GradualChangeDataBinDing">
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.test.textcolor.GradualChangeTextView
+            android:id="@+id/changeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:gradual_text="测试"
+            app:gradual_text_size="80dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="从左往右滑动"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/changeTextView" />
+
+        <Button
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="从右往左滑动"
+            app:layout_constraintLeft_toRightOf="@id/left"
+            app:layout_constraintTop_toBottomOf="@+id/changeTextView" />
+
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/right">
+
+            <com.example.test.textcolor.GradualChangeTextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:gradual_text="首页"
+                app:gradual_below_color="#000000"
+                app:gradual_up_color="#30EA25"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.example.test.textcolor.GradualChangeTextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:gradual_below_color="#000000"
+                app:gradual_text="我的"
+                app:gradual_up_color="#ff0000"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.example.test.textcolor.GradualChangeTextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:gradual_below_color="#000000"
+                app:gradual_text="测试"
+                app:gradual_up_color="#00ff00"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.example.test.textcolor.GradualChangeTextView
+                android:id="@+id/text4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:gradual_below_color="#000000"
+                app:gradual_text="设置"
+                app:gradual_up_color="#0000ff"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/linear" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

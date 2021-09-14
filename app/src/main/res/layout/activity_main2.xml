@@ -102,6 +102,12 @@
                 android:onClick="viewPager"
                 android:text="ViewPager" />
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="textColor"
+                android:text="textColor"/>
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>

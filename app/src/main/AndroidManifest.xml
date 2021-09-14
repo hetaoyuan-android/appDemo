@@ -17,10 +17,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".viewpager.ViewPagerActivity"></activity>
+        <activity android:name=".viewpager.ViewPagerActivity" />
         <activity android:name=".shapeview.ShapeViewActivity" />
         <activity android:name=".eventbus.ReceiveEventActivity" />
         <activity android:name=".eventbus.EventBusActivity" />
+        <activity android:name=".textcolor.GradualChangeActivity"/>
         <activity
             android:name=".videoplayer.GSYActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
