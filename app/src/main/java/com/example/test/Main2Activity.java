@@ -19,6 +19,7 @@ import com.example.test.shapeview.ShapeViewActivity;
 import com.example.test.sortlist.SortListActivity;
 import com.example.test.tabscroll.TabScrollActivity;
 import com.example.test.textcolor.GradualChangeActivity;
+import com.example.test.textcolor.TextColorActivity;
 import com.example.test.tree.TreeActivity;
 import com.example.test.twoganged.TwoGangedActivity;
 import com.example.test.videoplayer.GSYActivity;
@@ -115,7 +116,7 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     public void textColor(View view) {
-        Intent intent = new Intent(Main2Activity.this, GradualChangeActivity.class);
+        Intent intent = new Intent(Main2Activity.this, TextColorActivity.class);
         startActivity(intent);
     }
 }
