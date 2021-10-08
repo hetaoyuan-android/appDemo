@@ -107,6 +107,11 @@
                 android:layout_height="wrap_content"
                 android:onClick="textColor"
                 android:text="textColor"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="viewPager2"
+                android:text="viewPager2"/>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

@@ -24,6 +24,7 @@ import com.example.test.tree.TreeActivity;
 import com.example.test.twoganged.TwoGangedActivity;
 import com.example.test.videoplayer.GSYActivity;
 import com.example.test.viewpager.ViewPagerActivity;
+import com.example.test.viewpager2.ViewPager2Activity;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -117,6 +118,11 @@ public class Main2Activity extends AppCompatActivity {
 
     public void textColor(View view) {
         Intent intent = new Intent(Main2Activity.this, TextColorActivity.class);
+        startActivity(intent);
+    }
+
+    public void viewPager2(View view) {
+        Intent intent = new Intent(Main2Activity.this, ViewPager2Activity.class);
         startActivity(intent);
     }
 }
