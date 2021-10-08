@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 
 import java.lang.annotation.Annotation;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -87,5 +88,40 @@ public class InjectUtil {
         public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
             return this.method.invoke(target, args);
         }
+    }
+
+    /**
+     * findViewById
+     */
+    public static void bindViews(Activity activity) {
+        Class<? extends Activity> activityClass = activity.getClass(); //获取activity的class
+        Field[] fields = activityClass.getDeclaredFields();  ////获取activity的字段
+        //遍历所有的字段
+        for (Field field : fields) {
+            //获取该字段的注解
+            LcsBindView lcsBindView = field.getAnnotation(LcsBindView.class);
+            //!=null 说明该字段有注解并且是指定的注解
+            if (lcsBindView != null) {
+                int viewId = lcsBindView.value();
+                try {
+                    //获取到activity中findViewById的方法
+                    Method findViewByIdMethod = activityClass.getMethod("findViewById", int.class);
+                    try {
+                        //执行findViewById方法
+                        Object resView = findViewByIdMethod.invoke(activity, viewId);
+                        //允许通过反射访问私有变量
+                        field.setAccessible(true);
+                        //把字段的值设置该view的实例
+                        field.set(activity, resView);
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
     }
 }
