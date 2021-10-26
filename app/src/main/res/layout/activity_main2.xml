@@ -24,7 +24,7 @@
                 android:id="@+id/btn_img"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="拍照+水印" />
+                android:text="拍照+水印+相册" />
 
             <Button
                 android:layout_width="match_parent"
@@ -95,22 +95,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="shapeView"
+                android:textAllCaps="false"
                 android:text="ShapeView" />
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="viewPager"
+                android:textAllCaps="false"
                 android:text="ViewPager" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="textColor"
+                android:textAllCaps="false"
                 android:text="textColor"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="viewPager2"
+                android:textAllCaps="false"
                 android:text="viewPager2"/>
 
         </LinearLayout>

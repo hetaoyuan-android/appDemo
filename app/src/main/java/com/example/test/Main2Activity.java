@@ -125,4 +125,7 @@ public class Main2Activity extends AppCompatActivity {
         Intent intent = new Intent(Main2Activity.this, ViewPager2Activity.class);
         startActivity(intent);
     }
+    public void viewPager2Exception(View view) {
+        int i = 5 / 0;
+    }
 }
