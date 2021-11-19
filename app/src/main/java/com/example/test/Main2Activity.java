@@ -14,6 +14,7 @@ import com.example.test.circle.CircleActivity;
 import com.example.test.flowlayout.FlowActivity;
 import com.example.test.genged.ThreeGangedActivity;
 import com.example.test.imagetext.ImageAddTextActivity;
+import com.example.test.jd_home.NavActivity;
 import com.example.test.photopicker.selector.SelectorActivity;
 import com.example.test.shapeview.ShapeViewActivity;
 import com.example.test.slide_recyclerview.SlideRecyclerViewActivity;
@@ -128,6 +129,10 @@ public class Main2Activity extends AppCompatActivity {
     }
     public void slideRecyclerView(View view) {
         Intent intent = new Intent(Main2Activity.this, SlideRecyclerViewActivity.class);
+        startActivity(intent);
+    }
+    public void jdHome(View view) {
+        Intent intent = new Intent(Main2Activity.this, NavActivity.class);
         startActivity(intent);
     }
 }

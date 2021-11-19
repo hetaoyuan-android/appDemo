@@ -122,6 +122,13 @@
                 android:onClick="slideRecyclerView"
                 android:textAllCaps="false"
                 android:text="侧滑"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="jdHome"
+                android:textAllCaps="false"
+                android:text="京东首页吸顶效果"/>
+
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

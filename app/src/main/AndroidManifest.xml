@@ -17,7 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".slide_recyclerview.SlideRecyclerViewActivity"></activity>
+        <activity android:name=".jd_home.NavActivity" android:theme="@style/AppThemeJd"></activity>
+        <activity android:name=".slide_recyclerview.SlideRecyclerViewActivity" />
         <activity android:name=".textcolor.TextColorActivity" />
         <activity android:name=".viewpager.ViewPagerActivity" />
         <activity android:name=".shapeview.ShapeViewActivity" />
@@ -56,6 +57,11 @@
         <activity android:name=".photopicker.selector.SelectorActivity" />
         <activity android:name=".photopicker.selector.GalleryFileActivity" />
         <activity android:name=".viewpager2.ViewPager2Activity" />
+        <activity android:name=".jd_home.v1.MainActivity" android:theme="@style/AppThemeJd" />
+        <activity android:name=".jd_home.v2.MainActivity2" android:theme="@style/AppThemeJd" />
+        <activity android:name=".jd_home.v3.MainActivity3"  android:theme="@style/AppThemeJd"/>
+        <activity android:name=".jd_home.v4.MainActivity4" android:theme="@style/AppThemeJd" />
+        <activity android:name=".jd_home.v2.AdActivity" android:theme="@style/AppThemeJd"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"
