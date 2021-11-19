@@ -17,7 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".textcolor.TextColorActivity"></activity>
+        <activity android:name=".slide_recyclerview.SlideRecyclerViewActivity"></activity>
+        <activity android:name=".textcolor.TextColorActivity" />
         <activity android:name=".viewpager.ViewPagerActivity" />
         <activity android:name=".shapeview.ShapeViewActivity" />
         <activity android:name=".eventbus.ReceiveEventActivity" />
@@ -54,7 +55,7 @@
         <activity android:name=".twoganged.view.ScrollGridActivity" />
         <activity android:name=".photopicker.selector.SelectorActivity" />
         <activity android:name=".photopicker.selector.GalleryFileActivity" />
-        <activity android:name=".viewpager2.ViewPager2Activity"/>
+        <activity android:name=".viewpager2.ViewPager2Activity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

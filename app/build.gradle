@@ -74,4 +74,6 @@ dependencies {
     implementation "androidx.viewpager2:viewpager2:1.0.0"
 
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
 }

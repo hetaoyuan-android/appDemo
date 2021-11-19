@@ -16,6 +16,7 @@ import com.example.test.genged.ThreeGangedActivity;
 import com.example.test.imagetext.ImageAddTextActivity;
 import com.example.test.photopicker.selector.SelectorActivity;
 import com.example.test.shapeview.ShapeViewActivity;
+import com.example.test.slide_recyclerview.SlideRecyclerViewActivity;
 import com.example.test.sortlist.SortListActivity;
 import com.example.test.tabscroll.TabScrollActivity;
 import com.example.test.textcolor.GradualChangeActivity;
@@ -125,7 +126,8 @@ public class Main2Activity extends AppCompatActivity {
         Intent intent = new Intent(Main2Activity.this, ViewPager2Activity.class);
         startActivity(intent);
     }
-    public void viewPager2Exception(View view) {
-        int i = 5 / 0;
+    public void slideRecyclerView(View view) {
+        Intent intent = new Intent(Main2Activity.this, SlideRecyclerViewActivity.class);
+        startActivity(intent);
     }
 }
