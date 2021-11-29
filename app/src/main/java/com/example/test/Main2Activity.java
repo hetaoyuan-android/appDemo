@@ -126,6 +126,7 @@ public class Main2Activity extends AppCompatActivity {
     public void viewPager2(View view) {
         Intent intent = new Intent(Main2Activity.this, ViewPager2Activity.class);
         startActivity(intent);
+
     }
     public void slideRecyclerView(View view) {
         Intent intent = new Intent(Main2Activity.this, SlideRecyclerViewActivity.class);
