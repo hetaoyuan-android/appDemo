@@ -2,8 +2,6 @@ package com.example.test.videoplayer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Build;
@@ -12,7 +10,6 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageView;
 
 import com.example.test.R;
 import com.shuyu.gsyvideoplayer.GSYVideoManager;
@@ -71,6 +68,7 @@ public class GSYActivity extends AppCompatActivity{
     private void init() {
         videoPlayer =  findViewById(R.id.detail_player);
         String source1 = "http://9890.vod.myqcloud.com/9890_4e292f9a3dd011e6b4078980237cc3d3.f20.mp4";
+//        String source1 = "rtsp://42.228.56.138:6354/openUrl/zWLefWU";
         initOrientationUtils(new StandardGSYVideoPlayer(this));
         resolveFull();
         videoPlayer.setUp(source1, true, "");
