@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.test">
+    package="com.example.test" >
 
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 相机权限 -->
     <uses-permission android:name="android.permission.CAMERA" /> <!-- 访问外部权限 -->
@@ -16,8 +16,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
-        <activity android:name=".jd_home.NavActivity" android:theme="@style/AppThemeJd"></activity>
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name=".bigimage.LargeImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".jd_home.NavActivity"
+            android:theme="@style/AppThemeJd" />
         <activity android:name=".slide_recyclerview.SlideRecyclerViewActivity" />
         <activity android:name=".textcolor.TextColorActivity" />
         <activity android:name=".viewpager.ViewPagerActivity" />
@@ -36,7 +41,7 @@
         <activity android:name=".tree.TreeActivity" />
         <activity android:name=".circle.CircleActivity" />
         <activity android:name=".bezier.BezierActivity" />
-        <activity android:name=".Main2Activity">
+        <activity android:name=".Main2Activity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -57,17 +62,27 @@
         <activity android:name=".photopicker.selector.SelectorActivity" />
         <activity android:name=".photopicker.selector.GalleryFileActivity" />
         <activity android:name=".viewpager2.ViewPager2Activity" />
-        <activity android:name=".jd_home.v1.MainActivity" android:theme="@style/AppThemeJd" />
-        <activity android:name=".jd_home.v2.MainActivity2" android:theme="@style/AppThemeJd" />
-        <activity android:name=".jd_home.v3.MainActivity3"  android:theme="@style/AppThemeJd"/>
-        <activity android:name=".jd_home.v4.MainActivity4" android:theme="@style/AppThemeJd" />
-        <activity android:name=".jd_home.v2.AdActivity" android:theme="@style/AppThemeJd"/>
+        <activity
+            android:name=".jd_home.v1.MainActivity"
+            android:theme="@style/AppThemeJd" />
+        <activity
+            android:name=".jd_home.v2.MainActivity2"
+            android:theme="@style/AppThemeJd" />
+        <activity
+            android:name=".jd_home.v3.MainActivity3"
+            android:theme="@style/AppThemeJd" />
+        <activity
+            android:name=".jd_home.v4.MainActivity4"
+            android:theme="@style/AppThemeJd" />
+        <activity
+            android:name=".jd_home.v2.AdActivity"
+            android:theme="@style/AppThemeJd" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
             android:exported="false"
-            android:grantUriPermissions="true">
+            android:grantUriPermissions="true" >
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />

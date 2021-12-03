@@ -88,4 +88,6 @@ dependencies {
     }
     implementation "com.github.bumptech.glide:glide:4.11.0"
     implementation "androidx.viewpager2:viewpager2:1.1.0-alpha01"
+    //加载长图
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view-androidx:3.10.0'
 }

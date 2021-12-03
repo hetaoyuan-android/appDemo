@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.example.test.annotation.AnnotationActivity;
 import com.example.test.bezier.BezierActivity;
+import com.example.test.bigimage.LargeImageActivity;
 import com.example.test.chart.ChartActivity;
 import com.example.test.circle.CircleActivity;
 import com.example.test.flowlayout.FlowActivity;
@@ -134,6 +135,14 @@ public class Main2Activity extends AppCompatActivity {
     }
     public void jdHome(View view) {
         Intent intent = new Intent(Main2Activity.this, NavActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 加载大图
+     */
+    public void largeImage(View view) {
+        Intent intent = new Intent(Main2Activity.this, LargeImageActivity.class);
         startActivity(intent);
     }
 }
