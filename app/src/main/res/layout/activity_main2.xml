@@ -135,6 +135,13 @@
                 android:textAllCaps="false"
                 android:text="加载大图"/>
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="coroutine"
+                android:textAllCaps="false"
+                android:text="协程"/>
+
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

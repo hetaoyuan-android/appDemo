@@ -90,4 +90,11 @@ dependencies {
     implementation "androidx.viewpager2:viewpager2:1.1.0-alpha01"
     //加载长图
     implementation 'com.davemorrissey.labs:subsampling-scale-image-view-androidx:3.10.0'
+    //日期
+    implementation 'com.github.loperSeven:DateTimePicker:0.5.0'//具体版本请看顶部jitpack标识，如0.5.0,仅支持androidx
+
+    //协程
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
+
 }

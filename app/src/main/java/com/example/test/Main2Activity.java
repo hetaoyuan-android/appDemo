@@ -12,6 +12,7 @@ import com.example.test.bezier.BezierActivity;
 import com.example.test.bigimage.LargeImageActivity;
 import com.example.test.chart.ChartActivity;
 import com.example.test.circle.CircleActivity;
+import com.example.test.coroutines.CoroutineActivity;
 import com.example.test.flowlayout.FlowActivity;
 import com.example.test.genged.ThreeGangedActivity;
 import com.example.test.imagetext.ImageAddTextActivity;
@@ -143,6 +144,11 @@ public class Main2Activity extends AppCompatActivity {
      */
     public void largeImage(View view) {
         Intent intent = new Intent(Main2Activity.this, LargeImageActivity.class);
+        startActivity(intent);
+    }
+
+    public void coroutine(View view) {
+        Intent intent = new Intent(Main2Activity.this, CoroutineActivity.class);
         startActivity(intent);
     }
 }
