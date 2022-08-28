@@ -30,11 +30,6 @@ public class DrawCanvas extends SurfaceView implements SurfaceHolder.Callback {
         getHolder().addCallback(this);
     }
 
-
-    public DrawCanvas(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-    }
-
     public void add(DrawPath path) {
         mInvoker.add(path);
     }
@@ -59,6 +54,17 @@ public class DrawCanvas extends SurfaceView implements SurfaceHolder.Callback {
 
     @Override
     public void surfaceCreated(@NonNull SurfaceHolder holder) {
+        isRunning = true;
+        mThread.start();
+    }
+
+    @Override
+    public void surfaceChanged(@NonNull SurfaceHolder holder, int format, int width, int height) {
+        mBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+    }
+
+    @Override
+    public void surfaceDestroyed(@NonNull SurfaceHolder holder) {
         boolean retry = true;
         isRunning = false;
         while (retry) {
@@ -69,16 +75,6 @@ public class DrawCanvas extends SurfaceView implements SurfaceHolder.Callback {
                 e.printStackTrace();
             }
         }
-    }
-
-    @Override
-    public void surfaceChanged(@NonNull SurfaceHolder holder, int format, int width, int height) {
-
-    }
-
-    @Override
-    public void surfaceDestroyed(@NonNull SurfaceHolder holder) {
-
     }
 
     private class DrawThread extends Thread {
