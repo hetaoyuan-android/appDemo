@@ -142,6 +142,13 @@
                 android:textAllCaps="false"
                 android:text="协程"/>
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="minLingDemo"
+                android:textAllCaps="false"
+                android:text="命令模式"/>
+
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

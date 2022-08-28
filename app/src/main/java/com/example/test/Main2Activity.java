@@ -17,6 +17,7 @@ import com.example.test.flowlayout.FlowActivity;
 import com.example.test.genged.ThreeGangedActivity;
 import com.example.test.imagetext.ImageAddTextActivity;
 import com.example.test.jd_home.NavActivity;
+import com.example.test.minling.MinLingActivity;
 import com.example.test.photopicker.selector.SelectorActivity;
 import com.example.test.shapeview.ShapeViewActivity;
 import com.example.test.slide_recyclerview.SlideRecyclerViewActivity;
@@ -149,6 +150,10 @@ public class Main2Activity extends AppCompatActivity {
 
     public void coroutine(View view) {
         Intent intent = new Intent(Main2Activity.this, CoroutineActivity.class);
+        startActivity(intent);
+    }
+    public void minLingDemo(View view) {
+        Intent intent = new Intent(Main2Activity.this, MinLingActivity.class);
         startActivity(intent);
     }
 }
