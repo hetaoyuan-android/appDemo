@@ -9,22 +9,22 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class CustomRecyclerView extends RecyclerView {
+public class CustomRecyclerViewTest extends RecyclerView {
 
     private float mLastY = 0f;
     private boolean isToBottom = false;
     private boolean isToTop = true;
 
 
-    public CustomRecyclerView(@NonNull Context context) {
+    public CustomRecyclerViewTest(@NonNull Context context) {
         super(context);
     }
 
-    public CustomRecyclerView(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public CustomRecyclerViewTest(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public CustomRecyclerView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public CustomRecyclerViewTest(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 

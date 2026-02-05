@@ -12,6 +12,7 @@ import com.example.test.bezier.BezierActivity;
 import com.example.test.bigimage.LargeImageActivity;
 import com.example.test.chart.ChartActivity;
 import com.example.test.circle.CircleActivity;
+import com.example.test.contact.ContactActivity;
 import com.example.test.coroutines.CoroutineActivity;
 import com.example.test.flowlayout.FlowActivity;
 import com.example.test.genged.ThreeGangedActivity;
@@ -55,6 +56,11 @@ public class Main2Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void contactClick(View view) {
+        Intent intent = new Intent(Main2Activity.this, ContactActivity.class);
+        startActivity(intent);
     }
 
     public void bezier(View view) {

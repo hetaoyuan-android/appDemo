@@ -1,1 +1,31 @@
-/build
+# --- Android 编译产物 ---
+build/
+bin/
+gen/
+*.apk
+*.aar
+*.ap_
+*.dex
+
+# --- Android Studio 配置文件 ---
+.idea/
+.gradle/
+local.properties
+Captures/
+.externalNativeBuild/
+.cxx/
+*.iml
+.navigation/
+
+# --- Kotlin 相关 ---
+.kotlin/
+kotlin-classes/
+
+# --- 操作系统临时文件 ---
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# --- 混淆配置产生的映射文件 (建议保留 release 版，但通常忽略编译过程产生的) ---
+/app/build/outputs/mapping/

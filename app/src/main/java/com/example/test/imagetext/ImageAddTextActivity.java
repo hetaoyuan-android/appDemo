@@ -23,12 +23,10 @@ import android.os.Environment;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.test.BuildConfig;
 import com.example.test.R;
 import com.example.test.utils.FileUtils;
 
