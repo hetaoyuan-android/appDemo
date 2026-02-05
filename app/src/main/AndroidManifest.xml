@@ -26,7 +26,7 @@
             android:name=".contact.ContactActivity"
             android:exported="true" />
         <activity
-            android:name=".DrawActivity"
+            android:name=".minling.DrawActivity"
             android:exported="false" />
         <activity
             android:name=".minling.MinLingActivity"

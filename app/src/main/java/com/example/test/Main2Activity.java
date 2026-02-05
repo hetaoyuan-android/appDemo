@@ -24,7 +24,6 @@ import com.example.test.shapeview.ShapeViewActivity;
 import com.example.test.slide_recyclerview.SlideRecyclerViewActivity;
 import com.example.test.sortlist.SortListActivity;
 import com.example.test.tabscroll.TabScrollActivity;
-import com.example.test.textcolor.GradualChangeActivity;
 import com.example.test.textcolor.TextColorActivity;
 import com.example.test.tree.TreeActivity;
 import com.example.test.twoganged.TwoGangedActivity;
