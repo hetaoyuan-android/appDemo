@@ -9,7 +9,7 @@ import android.util.Base64;
 import android.util.Log;
 
 
-import com.example.test.BuildConfig;
+
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -19,7 +19,6 @@ import javax.crypto.spec.SecretKeySpec;
 
 /**AES加密解密工具*/
 public class EncryptUtil {
-    BuildConfig s;
     private String key;
     private static EncryptUtil instance;
     private static final String TAG = EncryptUtil.class.getSimpleName();
