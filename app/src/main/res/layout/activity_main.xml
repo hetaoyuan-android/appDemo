@@ -1,19 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
-    <com.example.test.view.HorizontalView
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <ListView
-            android:id="@+id/lv_one"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></ListView>
-        <ListView
-            android:id="@+id/lv_two"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"></ListView>
-    </com.example.test.view.HorizontalView>
-</RelativeLayout>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btn_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="contactClick"
+                android:text="联系人" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="jdHome"
+                android:textAllCaps="false"
+                android:text="京东首页吸顶效果"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="flowClick"
+                android:textAllCaps="false"
+                android:text="流式布局"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="tree"
+                android:text="三级菜单" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="threeGanged"
+                android:text="省市区三级联动" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="tabList"
+                android:text="新闻标签" />
+
+            <Button
+                android:id="@+id/btn_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="扇形图" />
+
+            <Button
+                android:id="@+id/btn_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="拍照+水印+相册" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="bezier"
+                android:text="贝塞尔曲线" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="circle"
+                android:text="环形进度条" />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="annotation"
+                android:text="注解click" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="sortList"
+                android:text="拼音列表" />
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="videoPlayer"
+                android:text="视频播放" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="imgScale"
+                android:text="图片缩放" />
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="twoGanged"
+                android:text="二级联动" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="selectorImg"
+                android:text="图片选择" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="shapeView"
+                android:textAllCaps="false"
+                android:text="ShapeView" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="viewPager"
+                android:textAllCaps="false"
+                android:text="ViewPager" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="textColor"
+                android:textAllCaps="false"
+                android:text="textColor"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="viewPager2"
+                android:textAllCaps="false"
+                android:text="viewPager2"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="slideRecyclerView"
+                android:textAllCaps="false"
+                android:text="侧滑"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="largeImage"
+                android:textAllCaps="false"
+                android:text="加载大图"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="coroutine"
+                android:textAllCaps="false"
+                android:text="协程"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="minLingDemo"
+                android:textAllCaps="false"
+                android:text="命令模式"/>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

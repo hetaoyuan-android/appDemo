@@ -1,31 +1,20 @@
 package com.example.test.flowlayout;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.SimpleTarget;
-import com.bumptech.glide.request.transition.Transition;
 import com.example.test.R;
 
 import java.io.BufferedInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.IdentityHashMap;
-import java.util.concurrent.ExecutionException;
 
-public class FlowActivity extends AppCompatActivity {
+public class ImageScaleActivity extends AppCompatActivity {
 
     private  ZoomImageView zoomImageView;
     private String imagePath = "https://doge.zzzmh.cn/wallpaper/origin/b0fced9bf8864e88bb35b437b72f0c14.jpg";
@@ -57,7 +46,7 @@ public class FlowActivity extends AppCompatActivity {
 
         //setImagePathBitmap()是从系统中读取图片加载的方法，setResourceBitmap()是从资源文件中读取图片的方法。
 //        zoomImageView.setImagePathBitmap(imagePath, 1.0f);
-        zoomImageView.setResourceBitmap(FlowActivity.this, R.mipmap.b);
+        zoomImageView.setResourceBitmap(ImageScaleActivity.this, R.mipmap.b);
 
 
     }
