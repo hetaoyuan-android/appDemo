@@ -4,6 +4,7 @@ package com.example.test;
 import android.app.Application;
 import android.os.Environment;
 
+import com.example.test.skin.SkinManager;
 import com.example.test.tabscroll.db.SQLHelper;
 import com.example.test.utils.UnCeHandler;
 
@@ -22,6 +23,8 @@ public class AppApplication extends Application {
 		//设置该CrashHandler为程序的默认处理器
 		UnCeHandler catchExcep = new UnCeHandler(this);
 		Thread.setDefaultUncaughtExceptionHandler(catchExcep);
+		//皮肤切换初始化
+		SkinManager.getInstance().init(this);
 	}
 
 	/** 获取Application */

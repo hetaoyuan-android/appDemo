@@ -22,6 +22,7 @@ import com.example.test.jd_home.NavActivity;
 import com.example.test.minling.MinLingActivity;
 import com.example.test.photopicker.selector.SelectorActivity;
 import com.example.test.shapeview.ShapeViewActivity;
+import com.example.test.skin.SkinActivity;
 import com.example.test.slide_recyclerview.SlideRecyclerViewActivity;
 import com.example.test.sortlist.SortListActivity;
 import com.example.test.tabscroll.TabScrollActivity;
@@ -56,6 +57,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void skinClick(View view) {
+        Intent intent = new Intent(MainActivity.this, SkinActivity.class);
+        startActivity(intent);
     }
 
     public void contactClick(View view) {

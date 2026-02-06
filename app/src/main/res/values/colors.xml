@@ -51,4 +51,19 @@
     <color name="blue_line_color_dark">#0F8FFF</color>
     <color name="color_F5F5F5">#F5F5F5</color>
 
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="theme2">#416CDF</color>
+
+    <color name="skin_bg1">#fff</color>
+    <color name="skin_bg2">#ddd</color>
+    <color name="skin_text1">#000</color>
+    <color name="im_bg">#FF03DAC5</color>
+    <color name="skin_text_item_title_color">#323C49</color>
+    <color name="skin_text_item_describe_color">#788AA1</color>
+
 </resources>

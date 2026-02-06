@@ -31,6 +31,15 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
     }
 
+    sourceSets {
+        main {
+            res {
+                srcDirs 'src\\main\\res', 'src\\main\\res-dark'
+            }
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
     kotlinOptions {
         // 将 Kotlin 编译目标也改为 17
         jvmTarget = '17'

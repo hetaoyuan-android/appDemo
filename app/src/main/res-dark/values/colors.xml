@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="skin_bg1_dark">#000</color>
+    <color name="skin_bg2_dark">#ddd</color>
+
+    <color name="skin_text1_dark">#fff</color>
+
+
+    <color name="im_bg_dark">#FFBB86FC</color>
+    <color name="skin_text_item_title_color_dark">#E5F2FF</color>
+    <color name="skin_text_item_describe_color_dark">#90A6C1</color>
+    <color name="skin_bg_search_white_dark">#1FFFFFFF</color>
+    <color name="skin_bg_main_front_color_dark">#4D616E8A</color>
+</resources>

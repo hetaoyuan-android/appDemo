@@ -2,21 +2,32 @@ package com.example.test
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import android.widget.FrameLayout
-import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.core.view.LayoutInflaterCompat
+import com.example.test.skin.SkinFactory
+import com.example.test.skin.SkinManager
+import com.example.test.skin.SkipUpdateEvent
+import com.example.test.skin.ThemeConstant
+import org.greenrobot.eventbus.EventBus
 
 /**
  * 作者: yuanhetao
  * 时间: 2026/2/5
  * 描述:
  */
-abstract class BaseActivity : AppCompatActivity() {
+abstract class BaseActivity : AppCompatActivity(), SkinManager.SkinUpdateListener  {
 
+    private var mSkinFactory: SkinFactory? = null
+    var TAG: String = javaClass.getSimpleName()
     override fun onCreate(savedInstanceState: Bundle?) {
+        mSkinFactory = SkinFactory(this)
+        LayoutInflaterCompat.setFactory2(getLayoutInflater(), mSkinFactory!!)
+        SkinManager.getInstance().addSkinUpdateListener(TAG, this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_base)
-
         // 1. 初始化 Toolbar
         val toolbar = findViewById<Toolbar>(R.id.common_toolbar)
         setSupportActionBar(toolbar)
@@ -64,4 +75,40 @@ abstract class BaseActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+    override fun onSkinUpdate() {
+        if (mSkinFactory != null) {
+            mSkinFactory!!.apply()
+            changeStatusBar()
+            EventBus.getDefault().post(SkipUpdateEvent())
+        }
+    }
+
+    fun changeStatusBar() {
+        when (SkinManager.getInstance().mSkinSuffix) {
+            ThemeConstant.DARK -> {
+                setSystemBarFontColor(false)
+            }
+
+            ThemeConstant.GREEN -> {
+                setSystemBarFontColor(false)
+            }
+
+            else -> {
+                setSystemBarFontColor(true)
+            }
+        }
+    }
+
+    fun setSystemBarFontColor(dark: Boolean) {
+        if (dark) {
+            getWindow().getDecorView()
+                .setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
+        } else {
+            getWindow().getDecorView()
+                .setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
+        }
+        getWindow().setStatusBarColor(getColor(R.color.transparent))
+    }
+
 }

@@ -12,6 +12,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_skin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="skinClick"
+                android:text="皮肤切换" />
+
             <Button
                 android:id="@+id/btn_contact"
                 android:layout_width="match_parent"
