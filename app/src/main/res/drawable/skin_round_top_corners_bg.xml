@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:shape="rectangle"
+    tools:ignore="ResourceName">
+
+    <!-- 背景颜色 -->
+    <solid android:color="@android:color/white" />
+
+    <!-- 圆角设置 -->
+    <corners
+        android:topLeftRadius="32dp"
+        android:topRightRadius="32dp"
+        android:bottomLeftRadius="4dp"
+        android:bottomRightRadius="4dp" />
+</shape>

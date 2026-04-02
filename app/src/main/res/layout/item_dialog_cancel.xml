@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="3.6dp"
+        android:background="@color/skin_bg_chat_message_divider" />
+
+    <TextView
+        android:id="@+id/btv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/skin_text_item_title_color"
+        android:textSize="14sp" />
+
+
+</LinearLayout>

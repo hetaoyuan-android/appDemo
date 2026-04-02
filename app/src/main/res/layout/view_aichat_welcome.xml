@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:layout_width="@dimen/dimen_80dp"
+        android:layout_height="@dimen/dimen_140dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerInside"
+        android:src="@drawable/ai_chat_btn_icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_12dp"
+        android:text="@string/str_ai_chat_title"
+        android:textColor="#0D83FF"
+        android:textSize="@dimen/sp_20"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/dimen_24dp"
+        android:layout_marginTop="@dimen/dimen_12dp"
+        android:layout_marginEnd="@dimen/dimen_24dp"
+        android:gravity="center_horizontal"
+        android:text="@string/str_ai_chat_subtitle"
+        android:textColor="@color/text_color_323C49"
+        android:textSize="@dimen/sp_14" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20dp">
+
+        <TextView
+            android:id="@+id/tv_live"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_ai_chat_welcome_tab_bg"
+            android:paddingStart="@dimen/dimen_15dp"
+            android:paddingTop="@dimen/dimen_12dp"
+            android:paddingEnd="@dimen/dimen_15dp"
+            android:paddingBottom="@dimen/dimen_12dp"
+            android:text="@string/str_ai_chat_live"
+            android:textColor="@color/skin_main_radio_button_check"
+            app:layout_constraintEnd_toStartOf="@+id/tv_meeting"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_meeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_14dp"
+            android:layout_marginEnd="@dimen/dimen_14dp"
+            android:background="@drawable/shape_ai_chat_welcome_tab_bg"
+            android:paddingStart="@dimen/dimen_15dp"
+            android:paddingTop="@dimen/dimen_12dp"
+            android:paddingEnd="@dimen/dimen_15dp"
+            android:paddingBottom="@dimen/dimen_12dp"
+            android:text="@string/str_ai_chat_meeting"
+            android:textColor="@color/skin_main_radio_button_check"
+            app:layout_constraintEnd_toStartOf="@+id/tv_camera_upload"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/tv_live"
+            app:layout_constraintTop_toTopOf="@+id/tv_live" />
+
+        <TextView
+            android:id="@+id/tv_camera_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_ai_chat_welcome_tab_bg"
+            android:paddingStart="@dimen/dimen_15dp"
+            android:paddingTop="@dimen/dimen_12dp"
+            android:paddingEnd="@dimen/dimen_15dp"
+            android:paddingBottom="@dimen/dimen_12dp"
+            android:text="@string/str_ai_chat_camera_upload"
+            android:textColor="@color/skin_main_radio_button_check"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/tv_meeting"
+            app:layout_constraintTop_toTopOf="@+id/tv_live" />
+
+        <TextView
+            android:id="@+id/tv_send_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_14dp"
+            android:background="@drawable/shape_ai_chat_welcome_tab_bg"
+            android:paddingStart="@dimen/dimen_15dp"
+            android:paddingTop="@dimen/dimen_12dp"
+            android:paddingEnd="@dimen/dimen_15dp"
+            android:paddingBottom="@dimen/dimen_12dp"
+            android:text="@string/str_ai_chat_send_msg"
+            android:textColor="@color/skin_main_radio_button_check"
+            app:layout_constraintEnd_toStartOf="@id/tv_call_phone"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_live" />
+
+        <TextView
+            android:id="@+id/tv_call_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_14dp"
+            android:background="@drawable/shape_ai_chat_welcome_tab_bg"
+            android:paddingStart="@dimen/dimen_15dp"
+            android:paddingTop="@dimen/dimen_12dp"
+            android:paddingEnd="@dimen/dimen_15dp"
+            android:paddingBottom="@dimen/dimen_12dp"
+            android:text="@string/str_ai_chat_call_phone"
+            android:textColor="@color/skin_main_radio_button_check"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/tv_send_msg"
+            app:layout_constraintTop_toTopOf="@+id/tv_send_msg" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

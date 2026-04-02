@@ -116,4 +116,31 @@
         <item name="android:textSize">@dimen/sp_14</item>
     </style>
 
+    <!-- dialog从底部升起与消失 -->
+    <style name="CommentDialogAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/dialog_slide_out_bottom</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!--边框-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否悬浮在activity之上-->
+        <item name="android:windowIsTranslucent">true</item>
+
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--dialog空白区域是否 模糊-->
+
+        <item name="android:windowNoTitle">true</item>
+        <!--无标题-->
+    </style>
+
+    <style name="dialog_scale_anim">
+        <item name="android:windowEnterAnimation">@anim/dialog_scale_anim_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_scale_anim_out</item>
+    </style>
+
 </resources>

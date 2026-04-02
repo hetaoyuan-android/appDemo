@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.test.widget.ChatRootLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/skin_bg_content_background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    >
+
+    <include
+        android:id="@+id/includ_title"
+        layout="@layout/toolbar_base"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!--        show message list-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_aichat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/dimen_20dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <include
+            android:id="@+id/includ_welcome"
+            layout="@layout/view_aichat_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/chat_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/recorder_start_0"
+            android:gravity="bottom|center_horizontal"
+            android:paddingBottom="30dp"
+            android:text="@string/xmpp_cancel_voice_send"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/btntest"
+            android:text="停止测试按钮"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/skin_round_top_corners_bg"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!--    显示图片列表，固定高度，左右滑动-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_pic_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_12dp"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:layout_marginEnd="@dimen/dimen_12dp"
+            android:orientation="horizontal"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="8"
+            tools:listitem="@layout/item_aichat_pic_show" />
+
+        <TextView
+            android:id="@+id/tv_search_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rv_pic_show"
+            android:layout_marginStart="@dimen/dimen_54dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:background="@drawable/select_ai_chat_search_btn_bg"
+            android:textColor="@drawable/select_ai_chat_search_text_color"
+            android:paddingStart="@dimen/dimen_12dp"
+            android:paddingTop="@dimen/dimen_11dp"
+            android:paddingEnd="@dimen/dimen_12dp"
+            android:paddingBottom="@dimen/dimen_11dp"
+            android:text="@string/str_ai_chat_search_condition" />
+
+        <RelativeLayout
+            android:id="@+id/rl_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_search_condition"
+            android:minHeight="36dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_set_voice_or_keyboard"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp">
+
+                <!-- 进入录音按钮 -->
+
+                <ImageView
+                    android:id="@+id/btn_set_mode_voice"
+                    android:layout_width="@dimen/dimen_30dp"
+                    android:layout_height="@dimen/dimen_30dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/chatting_setmode_voice_btn"
+                    android:visibility="visible" />
+
+                <!-- 键盘按钮 -->
+
+                <ImageView
+                    android:id="@+id/btn_set_mode_keyboard"
+                    android:layout_width="@dimen/dimen_30dp"
+                    android:layout_height="@dimen/dimen_30dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/chatting_setmode_keyboard_btn"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <!-- 输入窗口 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_chat_editor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toLeftOf="@+id/rl_right"
+                android:layout_toRightOf="@+id/rl_set_voice_or_keyboard"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_input"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:background="@drawable/skin_message_edit_bg_corners_12"
+                        android:hint="@string/str_ai_chat_et_hint"
+                        android:maxLength="900"
+                        android:maxLines="5"
+                        android:minHeight="36dp"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="40dp"
+                        android:textColorHint="@color/color_9CB0C8"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- 按住说话按钮 -->
+
+            <com.example.test.widget.LongPressRecordView
+                android:id="@+id/view_long_press_record"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_36dp"
+                android:layout_toLeftOf="@+id/rl_right"
+                android:layout_toRightOf="@+id/rl_set_voice_or_keyboard"
+                android:visibility="gone" />
+
+            <!-- 加号按钮 -->
+
+            <LinearLayout
+                android:id="@+id/rl_right"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp">
+
+                <ImageView
+                    android:id="@+id/btn_more"
+                    android:layout_width="@dimen/dimen_30dp"
+                    android:layout_height="@dimen/dimen_30dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="center"
+                    android:src="@drawable/type_select_btn_pressed" />
+
+                <Button
+                    android:id="@+id/tv_send"
+                    android:layout_width="46dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/chat_press_speak_btn"
+                    android:elevation="0dp"
+                    android:stateListAnimator="@null"
+                    android:text="发送"
+                    android:textColor="@color/blue_dark"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</com.example.test.widget.ChatRootLayout>

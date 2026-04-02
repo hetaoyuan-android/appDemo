@@ -8,4 +8,23 @@
     <string name="subscribe_more_category">更多频道</string>
     <string name="subscribe_manager_category_info">单击增删频道</string>
     <string name="subscribe_manager_category_info_2">单击增删频道，长按拖拽排序</string>
+
+    <string name="str_ai_chat_title">Hi,我是你的AI助理</string>
+    <string name="str_ai_chat_subtitle">接入大模型能力，并整合所有你可访问的资料生产问答，你可以这样说</string>
+    <string name="str_ai_chat_live">视频呼叫某人</string>
+    <string name="str_ai_chat_meeting">新建会议</string>
+    <string name="str_ai_chat_camera_upload">新建拍传</string>
+    <string name="str_ai_chat_send_msg">发消息给某人</string>
+    <string name="str_ai_chat_call_phone">打电话给某人</string>
+    <string name="str_ai_chat_toolbar_title">AI对话</string>
+    <string name="str_ai_chat_et_hint">提问题或发指令</string>
+    <string name="str_ai_chat_search_condition">联网搜索</string>
+    <string name="str_ai_chat_dialog_title">从本地上传</string>
+    <string name="str_ai_chat_dialog_camera">拍照</string>
+    <string name="str_ai_chat_dialog_photo">照片</string>
+    <string name="xmpp_cancel_voice_send">手指上滑，取消发送</string>
+    <string name="str_hold_to_talk">按住说话</string>
+    <string name="xmpp_can_still_say">还能说%1$d秒</string>
+    <string name="conference_video_conference_create_confirm_title">开启视频会议</string>
+    <string name="ai_chat_waiting_text">思考中...</string>
 </resources>

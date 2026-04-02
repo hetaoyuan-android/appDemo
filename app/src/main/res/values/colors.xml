@@ -65,5 +65,20 @@
     <color name="im_bg">#FF03DAC5</color>
     <color name="skin_text_item_title_color">#323C49</color>
     <color name="skin_text_item_describe_color">#788AA1</color>
+    <color name="skin_bg_chat_message_divider">#EDF3FD</color>
+    <color name="skin_text_page_title_color">#323C49</color>
+    <color name="text_color_323C49">#323C49</color>
+    <color name="color_0D83FF_12">#1F0D83FF</color>
+    <color name="skin_main_radio_button_check">#0D83FF</color>
+    <color name="blue">#3eb6f3</color>
+    <color name="color_0D83FF">#0D83FF</color>
+    <color name="color_0D83FF_52">#850D83FF</color>
+    <color name="bg_back_gmeet">#EDF3FD</color>
+    <color name="color_9CB0C8">#9CB0C8</color>
+    <color name="blue_dark">#0D83FF</color>
+    <color name="background_black">#18212b</color>
+    <color name="md_light_blue_A100">#80D8FF</color>
+    <color name="skin_bg_common_divider_color">#BFD4E8</color>
+    <color name="color_0D83FF_06">#0F0D83FF</color>
 
 </resources>

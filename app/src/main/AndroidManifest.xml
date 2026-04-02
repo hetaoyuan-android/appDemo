@@ -45,6 +45,8 @@
         <activity
             android:name=".bigimage.LargeImageActivity"
             android:exported="false" />
+        <activity android:name=".ai.AiChatActivity"
+            android:exported="false"/>
         <activity
             android:name=".jd_home.NavActivity"
             android:theme="@style/AppThemeJd" />

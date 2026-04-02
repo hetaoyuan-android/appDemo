@@ -1,9 +1,15 @@
 package com.example.test
 
+import android.content.Context
+import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.view.View
+import android.view.WindowManager
 import android.widget.FrameLayout
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.LayoutInflaterCompat
@@ -109,6 +115,57 @@ abstract class BaseActivity : AppCompatActivity(), SkinManager.SkinUpdateListene
                 .setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
         }
         getWindow().setStatusBarColor(getColor(R.color.transparent))
+    }
+
+    /**
+     * 初始化 ToolBar 和状态栏占位符
+     *
+     * @param placeholderId          状态栏占位View的资源ID（可以为0表示不需要）
+     */
+    protected fun initIdToolBar(placeholderId: Int) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            val window = this.getWindow()
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+            window.setStatusBarColor(Color.TRANSPARENT)
+            window.getDecorView()
+                .setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR)
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            this.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        }
+
+        // 获取状态栏高度
+        val statusBarHeight: Int = getStatusBarHeight(this)
+        // 设置状态栏占位View高度
+        if (placeholderId != 0) {
+            val statusBarPlaceholder: View? = findViewById(placeholderId)
+            if (statusBarPlaceholder != null) {
+                val params = statusBarPlaceholder.getLayoutParams() as LinearLayout.LayoutParams
+                params.height = statusBarHeight
+                statusBarPlaceholder.setLayoutParams(params)
+            }
+        }
+    }
+
+    fun getStatusBarHeight(context: Context): Int {
+        var result = 0
+        val resourceId =
+            context.getResources().getIdentifier("status_bar_height", "dimen", "android")
+        if (resourceId > 0) {
+            result = context.getResources().getDimensionPixelSize(resourceId)
+        } else {
+            // 如果没有找到资源，尝试使用默认值（如 24dp）
+            result = dip2px(context, 24f)
+            Log.w("StatusBarUtils", "无法获取系统状态栏高度，默认使用 24dp (" + result + "px)")
+        }
+        return result
+    }
+
+
+
+    fun dip2px(context: Context, dipValue: Float): Int {
+        val scale = context.getResources().getDisplayMetrics().density
+        return (dipValue * scale + 0.5f).toInt()
     }
 
 }

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.test.ai.AiChatActivity;
 import com.example.test.annotation.AnnotationActivity;
 import com.example.test.bezier.BezierActivity;
 import com.example.test.bigimage.LargeImageActivity;
@@ -61,6 +62,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void skinClick(View view) {
         Intent intent = new Intent(MainActivity.this, SkinActivity.class);
+        startActivity(intent);
+    }
+
+    public void clickAI(View view) {
+        Intent intent = new Intent(MainActivity.this, AiChatActivity.class);
         startActivity(intent);
     }
 

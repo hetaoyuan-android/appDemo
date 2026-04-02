@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/dimen_60dp"
+    android:layout_height="@dimen/dimen_60dp"
+    android:layout_marginEnd="@dimen/dimen_13dp"
+    android:background="@drawable/shape_ai_chat_item_pic_show_bg">
+
+    <ImageView
+        android:id="@+id/iv_pic_show"
+        android:layout_width="@dimen/dimen_58dp"
+        android:layout_height="@dimen/dimen_58dp"
+        android:layout_gravity="center"
+        tools:background="@color/blue" />
+
+    <ImageView
+        android:id="@+id/iv_pic_close"
+        android:layout_width="@dimen/dimen_24dp"
+        android:layout_height="@dimen/dimen_24dp"
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/dimen_1dp"
+        android:src="@drawable/ai_chat_pic_show_close" />
+
+    <!--    有数据时最后一个展示下面的view-->
+    <ImageView
+        android:id="@+id/iv_pic_add"
+        android:layout_width="@dimen/dimen_20dp"
+        android:layout_height="@dimen/dimen_20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ai_chat_pic_show_add"
+        android:visibility="gone" />
+
+
+</FrameLayout>

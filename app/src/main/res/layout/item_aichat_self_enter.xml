@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_text_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginStart="@dimen/dimen_12dp"
+        android:layout_marginTop="@dimen/dimen_12dp"
+        android:layout_marginEnd="@dimen/dimen_12dp"
+        android:background="@drawable/chatto_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_self_enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:gravity="center_vertical"
+            android:minHeight="40dp"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:textColor="#333333"
+            android:textColorLink="@color/md_light_blue_A100"
+            android:textSize="16sp"
+            tools:text="用户自己问的，测试数据，\n不会显示在UI上,测试换行" />
+    </LinearLayout>
+
+
+</FrameLayout>

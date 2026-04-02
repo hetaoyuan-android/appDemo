@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <!--    显示图片列表，固定高度，左右滑动-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_pic_show"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_60dp"
+        android:layout_gravity="end"
+        android:layout_marginStart="@dimen/dimen_12dp"
+        android:layout_marginTop="@dimen/dimen_12dp"
+        android:layout_marginEnd="@dimen/dimen_12dp"
+        android:orientation="horizontal"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:background="@color/blue"
+        tools:itemCount="8"
+        tools:listitem="@layout/item_aichat_pic_show"
+        tools:minWidth="@dimen/dimen_50dp" />
+
+
+</FrameLayout>
