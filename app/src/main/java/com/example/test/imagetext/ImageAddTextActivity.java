@@ -23,6 +23,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -44,7 +45,7 @@ public class ImageAddTextActivity extends AppCompatActivity {
     private static final int PIC_OK = 1006;
 
     private ImageView ivPhoto;
-    private Button button,button1, photo;
+    private Button button,button1, photo, h5_image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,14 +55,22 @@ public class ImageAddTextActivity extends AppCompatActivity {
         button = findViewById(R.id.button);
         button1 = findViewById(R.id.button1);
         photo = findViewById(R.id.photo);
+        h5_image = findViewById(R.id.h5_image);
         button.setOnClickListener(v -> checkPermissionAndCamera());
         button1.setOnClickListener(v -> {
             Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.b);
-            Bitmap bitmap1 = ImageUtil.drawTextToRightBottom(ImageAddTextActivity.this, bitmap, "拖鞋王子猪", 30, R.color.colorPrimary, 20, 30);
+            Bitmap bitmap1 = ImageUtil.drawTextToRightBottom(ImageAddTextActivity.this, bitmap, getWatermarkText(), 30, R.color.colorPrimary, 20, 30);
             ivPhoto.setImageBitmap(bitmap1);
         });
         photo.setOnClickListener(v -> {
             openGallery();
+        });
+        h5_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ImageAddTextActivity.this, H5ImageActivity.class);
+                startActivity(intent);
+            }
         });
 
     }
@@ -103,7 +112,14 @@ public class ImageAddTextActivity extends AppCompatActivity {
         }
     }
 
-    //用于保存拍照图片的uri
+    /**
+     * 获取水印文字（当前日期时间），格式：2026/6/8 15:41
+     */
+    private String getWatermarkText() {
+        return new SimpleDateFormat("yyyy/M/d HH:mm", Locale.getDefault()).format(new Date());
+    }
+
+    // 用于保存拍照图片的uri
     private Uri mCameraUri;
 
     // 用于保存图片的文件路径，Android 10以下使用图片路径访问图片
@@ -200,7 +216,7 @@ public class ImageAddTextActivity extends AppCompatActivity {
 //                    ivPhoto.setImageBitmap(BitmapFactory.decodeFile(mCameraImagePath));
                     bitmap = BitmapFactory.decodeFile(mCameraImagePath);
                 }
-                Bitmap bitmap1 = ImageUtil.drawTextToRightBottom(this,bitmap,"拖鞋王子猪",30, Color.RED,20,30);
+                Bitmap bitmap1 = ImageUtil.drawTextToRightBottom(this,bitmap,getWatermarkText(),30, Color.RED,20,30);
                 ivPhoto.setImageBitmap(bitmap1);
             } else {
                 Toast.makeText(this,"取消",Toast.LENGTH_LONG).show();

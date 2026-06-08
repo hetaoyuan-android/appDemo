@@ -33,6 +33,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button1"
         android:text="相册"/>
+    <Button
+        android:id="@+id/h5_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photo"
+        android:text="H5加水印"/>
 
     <ImageView
         android:id="@+id/imageView"

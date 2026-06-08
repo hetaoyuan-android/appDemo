@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>H5 拍照加水印</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .header {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .photo-area {
+            width: 100%;
+            max-width: 360px;
+            min-height: 300px;
+            background: #fff;
+            border: 2px dashed #ddd;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        .photo-area img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .placeholder {
+            color: #999;
+            font-size: 14px;
+            text-align: center;
+        }
+        .btn {
+            width: 100%;
+            max-width: 360px;
+            padding: 14px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        .btn:active {
+            opacity: 0.8;
+        }
+        .btn-camera {
+            background: #1890ff;
+            color: #fff;
+        }
+        .btn-reset {
+            background: #fff;
+            color: #666;
+            border: 1px solid #ddd;
+            margin-top: 12px;
+        }
+        .status {
+            margin-top: 12px;
+            color: #999;
+            font-size: 13px;
+        }
+        .watermark-tip {
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">H5 拍照加水印</div>
+
+    <div class="photo-area" id="photoArea">
+        <div class="placeholder" id="placeholder">点击下方按钮拍照<br>水印将自动添加</div>
+    </div>
+
+    <button class="btn btn-camera" id="btnCapture">📷 拍照</button>
+    <button class="btn btn-reset" id="btnReset">重新拍照</button>
+
+    <div class="status" id="status"></div>
+    <div class="watermark-tip">拍照后水印将自动添加在右下角</div>
+
+    <script>
+        var btnCapture = document.getElementById('btnCapture');
+        var btnReset = document.getElementById('btnReset');
+        var photoArea = document.getElementById('photoArea');
+        var placeholder = document.getElementById('placeholder');
+        var statusEl = document.getElementById('status');
+
+        // 调起原生相机拍照
+        btnCapture.addEventListener('click', function() {
+            try {
+                statusEl.textContent = '正在调起相机...';
+                // 调用原生 Android 方法
+                if (window.Android && window.Android.capturePhoto) {
+                    window.Android.capturePhoto();
+                } else {
+                    statusEl.textContent = '错误：无法连接原生相机，请检查运行环境';
+                }
+            } catch (e) {
+                statusEl.textContent = '错误：' + e.message;
+            }
+        });
+
+        // 重置
+        btnReset.addEventListener('click', function() {
+            photoArea.innerHTML = '<div class="placeholder" id="placeholder">点击下方按钮拍照<br>水印将自动添加</div>';
+            placeholder = document.getElementById('placeholder');
+            statusEl.textContent = '';
+        });
+
+        // 原生回调：接收 base64 图片并展示
+        window.onPhotoCaptured = function(base64Image) {
+            statusEl.textContent = '拍照成功！水印已添加';
+            placeholder.style.display = 'none';
+            var img = document.createElement('img');
+            img.src = 'data:image/jpeg;base64,' + base64Image;
+            img.alt = '拍照结果';
+            photoArea.innerHTML = '';
+            photoArea.appendChild(img);
+        };
+
+        // 原生回调：拍照取消或失败
+        window.onPhotoError = function(errorMsg) {
+            statusEl.textContent = errorMsg || '拍照失败，请重试';
+        };
+    </script>
+</body>
+</html>

@@ -78,6 +78,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".imagetext.ImageAddTextActivity" />
+        <activity android:name=".imagetext.H5ImageActivity" />
         <activity android:name=".chart.ChartActivity" />
         <activity android:name=".view.HorizontalActivity" />
         <activity android:name=".sortlist.SortListActivity" />

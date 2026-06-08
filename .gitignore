@@ -1,0 +1,47 @@
+# ====== Gradle ======
+.gradle/
+build/
+*/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# ====== IDE (Android Studio) ======
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# ====== OS ======
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# ====== Local Config ======
+local.properties
+*.env
+*.keystore
+!debug.keystore
+
+# ====== WorkBuddy ======
+.workbuddy/
+
+# ====== Android ======
+*.apk
+*.aab
+*.dex
+*.class
+bin/
+gen/
+out/
+.navigation/
+captures/
+.externalNativeBuild/
+.cxx/
+*.hprof
+
+# ====== Logs ======
+*.log
+
+# ====== Testing ======
+/test-results/
+/reports/
