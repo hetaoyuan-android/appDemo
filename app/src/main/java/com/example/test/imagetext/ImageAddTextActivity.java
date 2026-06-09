@@ -59,7 +59,7 @@ public class ImageAddTextActivity extends AppCompatActivity {
         button.setOnClickListener(v -> checkPermissionAndCamera());
         button1.setOnClickListener(v -> {
             Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.b);
-            Bitmap bitmap1 = ImageUtil.drawTextToRightBottom(ImageAddTextActivity.this, bitmap, getWatermarkText(), 30, R.color.colorPrimary, 20, 30);
+            Bitmap bitmap1 = ImageUtil.drawTextToRightBottom(ImageAddTextActivity.this, bitmap, getWatermarkText(), 50, getResources().getColor(R.color.colorPrimary), 20, 30);
             ivPhoto.setImageBitmap(bitmap1);
         });
         photo.setOnClickListener(v -> {

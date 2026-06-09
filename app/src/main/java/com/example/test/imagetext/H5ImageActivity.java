@@ -225,7 +225,7 @@ public class H5ImageActivity extends AppCompatActivity {
 
             // 2. 加水印到右下角
             Bitmap watermarkedBitmap = ImageUtil.drawTextToRightBottom(
-                    this, bitmap, getCurrentDateTime(), 30, Color.RED, 20, 30);
+                    this, bitmap, getCurrentDateTime(), 50, Color.RED, 20, 30);
 
             // 释放原图内存
             if (watermarkedBitmap != bitmap) {

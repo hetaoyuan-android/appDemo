@@ -111,12 +111,16 @@ public class ImageUtil {
      * @param context
      * @param bitmap
      * @param text
+     * @param size 字体大小，单位为sp
+     * @param color 颜色值
+     * @param paddingLeft 左边距，单位为dp
+     * @param paddingTop 上边距，单位为dp
      * @return
      */
     public static Bitmap drawTextToLeftTop(Context context, Bitmap bitmap, String text, int size, int color, int paddingLeft, int paddingTop) {
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColor(color);
-        paint.setTextSize(dp2px(context, size));
+        paint.setTextSize(sp2px(context, size));
         Rect bounds = new Rect();
         paint.getTextBounds(text, 0, text.length(), bounds);
         return drawTextToBitmap(context, bitmap, text, paint, bounds,
@@ -130,14 +134,16 @@ public class ImageUtil {
      * @param context
      * @param bitmap
      * @param text
-     * @param size
-     * @param color
+     * @param size 字体大小，单位为sp
+     * @param color 颜色值
+     * @param paddingRight 右边距，单位为dp
+     * @param paddingBottom 下边距，单位为dp
      * @return
      */
     public static Bitmap drawTextToRightBottom(Context context, Bitmap bitmap, String text, int size, int color, int paddingRight, int paddingBottom) {
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColor(color);
-        paint.setTextSize(dp2px(context, size));
+        paint.setTextSize(sp2px(context, size));
         Rect bounds = new Rect();
         paint.getTextBounds(text, 0, text.length(), bounds);
         return drawTextToBitmap(context, bitmap, text, paint, bounds,
@@ -151,16 +157,16 @@ public class ImageUtil {
      * @param context
      * @param bitmap
      * @param text
-     * @param size
-     * @param color
-     * @param paddingRight
-     * @param paddingTop
+     * @param size 字体大小，单位为sp
+     * @param color 颜色值
+     * @param paddingRight 右边距，单位为dp
+     * @param paddingTop 上边距，单位为dp
      * @return
      */
     public static Bitmap drawTextToRightTop(Context context, Bitmap bitmap, String text, int size, int color, int paddingRight, int paddingTop) {
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColor(color);
-        paint.setTextSize(dp2px(context, size));
+        paint.setTextSize(sp2px(context, size));
         Rect bounds = new Rect();
         paint.getTextBounds(text, 0, text.length(), bounds);
         return drawTextToBitmap(context, bitmap, text, paint, bounds,
@@ -174,16 +180,16 @@ public class ImageUtil {
      * @param context
      * @param bitmap
      * @param text
-     * @param size
-     * @param color
-     * @param paddingLeft
-     * @param paddingBottom
+     * @param size 字体大小，单位为sp
+     * @param color 颜色值
+     * @param paddingLeft 左边距，单位为dp
+     * @param paddingBottom 下边距，单位为dp
      * @return
      */
     public static Bitmap drawTextToLeftBottom(Context context, Bitmap bitmap, String text, int size, int color, int paddingLeft, int paddingBottom) {
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColor(color);
-        paint.setTextSize(dp2px(context, size));
+        paint.setTextSize(sp2px(context, size));
         Rect bounds = new Rect();
         paint.getTextBounds(text, 0, text.length(), bounds);
         return drawTextToBitmap(context, bitmap, text, paint, bounds,
@@ -197,14 +203,14 @@ public class ImageUtil {
      * @param context
      * @param bitmap
      * @param text
-     * @param size
-     * @param color
+     * @param size 字体大小，单位为sp
+     * @param color 颜色值
      * @return
      */
     public static Bitmap drawTextToCenter(Context context, Bitmap bitmap, String text, int size, int color) {
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColor(color);
-        paint.setTextSize(dp2px(context, size));
+        paint.setTextSize(sp2px(context, size));
         Rect bounds = new Rect();
         paint.getTextBounds(text, 0, text.length(), bounds);
         return drawTextToBitmap(context, bitmap, text, paint, bounds,
@@ -265,6 +271,18 @@ public class ImageUtil {
     public static int dp2px(Context context, float dp) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (dp * scale + 0.5f);
+    }
+
+    /**
+     * sp转pix（用于字体大小）
+     *
+     * @param context
+     * @param sp
+     * @return
+     */
+    public static int sp2px(Context context, float sp) {
+        final float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
+        return (int) (sp * fontScale + 0.5f);
     }
 }
 
